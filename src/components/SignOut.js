@@ -3,7 +3,7 @@ import React from 'react';
 const SignOut = () =>
 {
     return (
-        <button>Sign Out</button>
+        <button className="sign-out-button">Sign Out</button>
     );
 };
 

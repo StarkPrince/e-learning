@@ -3,7 +3,7 @@ import React from 'react';
 const SearchBar = () =>
 {
     return (
-        <div>
+        <div className="search-bar">
             <input type="text" placeholder="Search..." />
             <select>
                 <option value="">All Categories</option>

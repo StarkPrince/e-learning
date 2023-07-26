@@ -8,36 +8,43 @@ import SearchBar from './components/SearchBar';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import VideoPlayer from './components/VideoPlayer';
+import './index.css';
+
 function App()
 {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/signin">Sign In</Link></li>
-            <li><Link to="/signout">Sign Out</Link></li>
-            <li><Link to="/addcourse">Add Course</Link></li>
-            <li><Link to="/search">Search</Link></li>
-            <li><Link to="/videoplayer">Video Player</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            <li><Link to="/payment">Payment</Link></li>
-          </ul>
-        </nav>
+    <div className="container">
+      <Router>
+        <div>
+          <header className="header">
+            <h1>E-Learning Platform</h1>
+            <nav>
+              <ul className="nav">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/signin">Sign In</Link></li>
+                <li><Link to="/signout">Sign Out</Link></li>
+                <li><Link to="/addcourse">Add Course</Link></li>
+                <li><Link to="/search">Search</Link></li>
+                <li><Link to="/videoplayer">Video Player</Link></li>
+                <li><Link to="/cart">Cart</Link></li>
+                <li><Link to="/payment">Payment</Link></li>
+              </ul>
+            </nav>
+          </header>
 
-        <Routes>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signout" element={<SignOut />} />
-          <Route path="/addcourse" element={<AddCourse />} />
-          <Route path="/search" element={<SearchBar />} />
-          <Route path="/videoplayer" element={<VideoPlayer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/" element={<LandingPage />} />
-        </Routes>
-      </div>
-    </Router>
+          <Routes>
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signout" element={<SignOut />} />
+            <Route path="/addcourse" element={<AddCourse />} />
+            <Route path="/search" element={<SearchBar />} />
+            <Route path="/videoplayer" element={<VideoPlayer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
 

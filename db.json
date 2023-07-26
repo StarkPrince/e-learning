@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "$2a$10$euvSq7PvhsRdud9vkDD3xOo.gUo3HJAEuJTF/UNq9e5fMAISHjbNK"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Abhishek",
+      "link": "https://www.youtube.com/watch?v=QLBwWXpHRPo",
+      "id": 1
+    }
+  ]
+}
