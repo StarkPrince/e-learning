@@ -28,11 +28,14 @@ const CoursesList = ({ fetchCourses, updateCourse, deleteCourse, courses }) =>
 
 
     return (
-        <div>
+        <div className="course-list-container">
             {courses.map(course => (
-                <div key={course.id}>
-                    <h2>{course.title}</h2>
-                    <p>{course.link}</p>
+                <div className="course-card" key={course.id}>
+                    <h2 className="course-title">{course.title}</h2>
+                    <button href={course.link} >Go to course</button>
+                    <div className="course-video">
+                        <img src="https://random.imagecdn.app/500/150" height="270" width="320" />
+                    </div>
                     <button onClick={() => handleUpdate(course)}>Update</button>
                     <button onClick={() => handleDelete(course.id)}>Delete</button>
                 </div>

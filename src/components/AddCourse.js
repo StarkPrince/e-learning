@@ -16,12 +16,13 @@ const AddCourse = ({ addCourse }) =>
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Course Name' />
-            <input type="text" value={link} onChange={(e) => setLink(e.target.value)}
-                placeholder='Course Link' />
-            <button type="submit">Add Course</button>
-        </form>
+        <div className="add-course-container">
+            <form onSubmit={handleSubmit} className="add-course-form">
+                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="add-course-input" placeholder='Course Name' />
+                <input type="text" value={link} onChange={(e) => setLink(e.target.value)} className="add-course-input" placeholder='Course Link' />
+                <button type="submit" className="add-course-submit">Add Course</button>
+            </form>
+        </div>
     );
 };
 

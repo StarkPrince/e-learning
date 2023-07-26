@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import AddCourse from './components/AddCourse';
 import Cart from './components/Cart';
 import LandingPage from './components/LandingPage';
@@ -16,22 +16,16 @@ function App()
     <div className="container">
       <Router>
         <div>
-          <header className="header">
-            <h1>E-Learning Platform</h1>
-            <nav>
-              <ul className="nav">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/signin">Sign In</Link></li>
-                <li><Link to="/signout">Sign Out</Link></li>
-                <li><Link to="/addcourse">Add Course</Link></li>
-                <li><Link to="/search">Search</Link></li>
-                <li><Link to="/videoplayer">Video Player</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
-                <li><Link to="/payment">Payment</Link></li>
-              </ul>
-            </nav>
-          </header>
-
+          <div className='navbar'>
+            <div className='logo'>MyElearning</div>
+            <div className='nav-links'>
+              <a href='/'>Home</a>
+              <a href='/search'>Search</a>
+              <a href='/addcourse'>Add Course</a>
+              <a href='/payment'>Payment</a>
+              <a href='/signin'>Sign In</a>
+            </div>
+          </div>
           <Routes>
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signout" element={<SignOut />} />
